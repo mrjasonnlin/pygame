@@ -4,7 +4,7 @@ from time import sleep
 port = 'com4'
 board = pyfirmata.Arduino(port)
 sleep(7)
-ledPin4 = board.get_pin('d:13:o')  # blue ,tie in 5v gnd
+ledPin4 = board.get_pin('d:12:o')  # blue ,tie in 5v gnd
 
 
 def setFord():
