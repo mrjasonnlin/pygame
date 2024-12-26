@@ -3,13 +3,13 @@ from time import sleep
 import random
 
 # Setting up the Arduino board
-port = 'com3'
+port = 'com4'
 board = Arduino(port)
 # Need to give some time to pyFirmata and Arduino to synchronize
 sleep(5)
 
 # Setup mode of pin 2 as PWM
-pin = 11
+pin = 5
 board.digital[pin].mode = PWM
 
 for i in range(0, 99):
