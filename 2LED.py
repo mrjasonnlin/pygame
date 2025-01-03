@@ -12,7 +12,7 @@ board.digital[servopin].mode = SERVO
 
 top = tk.Tk()
 top.title("blink led using button")
-top.minsize(300, 300)
+top.minsize(200, 300)
 
 
 def onStartButtonPress10():
@@ -82,28 +82,28 @@ def servoFordBack():
     servoBack()
 
 
-startButton = tk.Button(top, text="LED燈亮10秒", command=onStartButtonPress10)
+startButton = tk.Button(top, bd=5, bg='#89CFF0', text="LED燈亮10秒", command=onStartButtonPress10)
 startButton.pack()
 
-startButton2 = tk.Button(top, text="LED燈亮30秒", command=onStartButtonPress30)
+startButton2 = tk.Button(top, bd=5, bg='#89CFF0', text="LED燈亮30秒", command=onStartButtonPress30)
 startButton2.pack()
 
-startButton3 = tk.Button(top, text="LED燈慢閃爍10次", command=setFord)
+startButton3 = tk.Button(top, bd=5, bg='#89CFF0', text="LED燈慢閃爍10次", command=setFord)
 startButton3.pack()
 
-startButton4 = tk.Button(top, text="LED燈快閃爍10次", command=setBack)
+startButton4 = tk.Button(top, bd=5, bg='#89CFF0', text="LED燈快閃爍10次", command=setBack)
 startButton4.pack()
 
-startButton5 = tk.Button(top, text="LED燈快慢閃爍10次", command=setFordBack)
+startButton5 = tk.Button(top, bd=5, bg='#89CFF0', text="LED燈快慢閃爍10次", command=setFordBack)
 startButton5.pack()
 
-startButton6 = tk.Button(top, text="伺服馬達180度來回3次", command=servoFord)
+startButton6 = tk.Button(top, bd=5, bg='#FF7F7F', text="伺服馬達180度來回3次", command=servoFord)
 startButton6.pack()
 
-startButton7 = tk.Button(top, text="伺服馬達90度來回3次", command=servoBack)
+startButton7 = tk.Button(top, bd=5, bg='#FF7F7F',text="伺服馬達90度來回3次", command=servoBack)
 startButton7.pack()
 
-startButton8 = tk.Button(top, text="伺服馬達180+90度來回3次", command=servoFordBack)
+startButton8 = tk.Button(top, bd=5, bg='#FF7F7F',text="伺服馬達180+90度來回3次", command=servoFordBack)
 startButton8.pack()
 
 top.mainloop()
