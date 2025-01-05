@@ -1,7 +1,7 @@
 import pyfirmata
 from time import sleep
 
-port = 'com4'
+port = 'com5'
 board = pyfirmata.Arduino(port)
 sleep(7)
 ledPin4 = board.get_pin('d:12:o')  # blue ,tie in 5v gnd
