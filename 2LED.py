@@ -1,9 +1,9 @@
-import tkinter as tk
+import     tkinter as tk
 import pyfirmata
 from pyfirmata import SERVO
 from time import sleep
 
-port = 'com5'
+port = 'com4'
 board = pyfirmata.Arduino(port)
 sleep(5)
 ledPin = board.get_pin('d:12:o')
