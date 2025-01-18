@@ -5,6 +5,7 @@
 
 import tkinter
 import pyfirmata
+from time import sleep
 
 
 # Define the action associated with Start button press
@@ -14,6 +15,7 @@ def onStartButtonPress():
             analogReadLabel.config(text=str(a0.read()))
             analogReadLabel.update_idletasks()
             top.update()
+            sleep(1)
         else:
             break
     board.exit()
@@ -26,7 +28,7 @@ def onExitButtonPress():
 
 
 # Associate port and board with pyFirmata
-port = 'com4'
+port = 'com5'
 board = pyfirmata.Arduino(port)
 
 # Using iterator thread to avoid buffer overflow
@@ -40,6 +42,7 @@ a0 = board.get_pin('a:0:i')
 # Initialize main windows with title and size
 top = tkinter.Tk()
 top.title("Reading Analog pins")
+top.minsize(300, 300)
 
 # Create Label to read analog input
 descriptionLabel = tkinter.Label(top, text="Potentiometer input:- ")
