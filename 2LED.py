@@ -83,42 +83,42 @@ def servoFordBack():
     servoFord()
     servoBack()
 
-mylabel1 = tk.Label(top, bd=5, fg='#000', bg='#3b1299', font=('Arial',20,'bold'), text='1', bitmap='info', compound='left')  # bitmap show left
+mylabel1 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial',20,'bold'), text='1', bitmap='info', compound='left')  # bitmap show left
 mylabel1.pack(fill='x')
 startButton = tk.Button(top, bd=5, bg='#89CFF0', text="LED燈亮10秒", command=onStartButtonPress10)
 startButton.pack(fill='x')
 
-mylabel2 = tk.Label(top, bd=5, fg='#000', bg='#3b1299', font=('Arial',20,'bold'), text='2', bitmap='info', compound='left')  # 建立 label 標籤
+mylabel2 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial',20,'bold'), text='2', bitmap='info', compound='left')  # 建立 label 標籤
 mylabel2.pack(fill='x')
 startButton2 = tk.Button(top, bd=5, bg='#89CFF0', text="LED燈亮30秒", command=onStartButtonPress30)
 startButton2.pack(fill='x')
 
-mylabel3 = tk.Label(top, bd=5, fg='#000', bg='#3b1299', font=('Arial',20,'bold'), text='3', bitmap='info', compound='left')  # 建立 label 標籤
+mylabel3 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial',20,'bold'), text='3', bitmap='info', compound='left')  # 建立 label 標籤
 mylabel3.pack(fill='x')
 startButton3 = tk.Button(top, bd=5, bg='#89CFF0', text="LED燈慢閃爍10次", command=setFord)
 startButton3.pack(fill='x')
 
-mylabel4 = tk.Label(top, bd=5, fg='#000', bg='#3b1299', font=('Arial',20,'bold'), text='4', bitmap='info', compound='left')  # 建立 label 標籤
+mylabel4 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial',20,'bold'), text='4', bitmap='info', compound='left')  # 建立 label 標籤
 mylabel4.pack(fill='x')
 startButton4 = tk.Button(top, bd=5, bg='#89CFF0', text="LED燈快閃爍10次", command=setBack)
 startButton4.pack(fill='x')
 
-mylabel5 = tk.Label(top, bd=5, fg='#000', bg='#3b1299', font=('Arial',20,'bold'), text='5', bitmap='info', compound='left')  # 建立 label 標籤
+mylabel5 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial',20,'bold'), text='5', bitmap='info', compound='left')  # 建立 label 標籤
 mylabel5.pack(fill='x')
 startButton5 = tk.Button(top, bd=5, bg='#89CFF0', text="LED燈快慢閃爍10次", command=setFordBack)
 startButton5.pack(fill='x')
 
-mylabel6 = tk.Label(top, bd=5, fg='#000', bg='#3b1299', font=('Arial',20,'bold'), text='6', bitmap='info', compound='left')  # 建立 label 標籤
+mylabel6 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial',20,'bold'), text='6', bitmap='info', compound='left')  # 建立 label 標籤
 mylabel6.pack(fill='x')
 startButton6 = tk.Button(top, bd=5, bg='#FF7F7F', text="伺服馬達180度來回3次", command=servoFord)
 startButton6.pack(fill='x')
 
-mylabel7 = tk.Label(top, bd=5, fg='#000', bg='#3b1299', font=('Arial',20,'bold'), text='7', bitmap='info', compound='left')  # 建立 label 標籤
+mylabel7 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial',20,'bold'), text='7', bitmap='info', compound='left')  # 建立 label 標籤
 mylabel7.pack(fill='x')
 startButton7 = tk.Button(top, bd=5, bg='#FF7F7F',text="伺服馬達90度來回3次", command=servoBack)
 startButton7.pack(fill='x')
 
-mylabel8 = tk.Label(top, bd=5, fg='#000', bg='#3b1299', font=('Arial',20,'bold'), text='8', bitmap='info', compound='left')  # 建立 label 標籤
+mylabel8 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial',20,'bold'), text='8', bitmap='info', compound='left')  # 建立 label 標籤
 mylabel8.pack(fill='x')
 startButton8 = tk.Button(top, bd=5, bg='#FF7F7F',text="伺服馬達180+90度來回3次", command=servoFordBack)
 startButton8.pack(fill='x')
