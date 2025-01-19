@@ -9,6 +9,7 @@ sleep(5)
 ledPin = board.get_pin('d:12:o')
 servopin = 13
 board.digital[servopin].mode = SERVO
+t = 10
 
 top = tk.Tk()
 top.title("blink led using button")
@@ -20,33 +21,31 @@ top.configure(background='#000')
 def onStartButtonPress10():
     startButton.config(state=tk.DISABLED)
     ledPin.write(1)
+    sleep(4)
+    ledPin.write(0)
+    startButton.config(state=tk.ACTIVE)
+
+def onStartButtonPress20():
+    startButton.config(state=tk.DISABLED)
+    ledPin.write(1)
     sleep(10)
     ledPin.write(0)
     startButton.config(state=tk.ACTIVE)
 
-def onStartButtonPress30():
-    startButton.config(state=tk.DISABLED)
-    ledPin.write(1)
-    sleep(30)
-    ledPin.write(0)
-    startButton.config(state=tk.ACTIVE)
-
-def setFord():
+def setBlinkslow():
     for y in range(0, 10, 1):
-        t = 2
         ledPin.write(1)
-        sleep(t)
+        sleep(0.8)
         ledPin.write(0)
-        sleep(t)
-def setBack():
+        sleep(0.8)
+def setBlinkfast():
     for y in range(0, 10, 1):
-        t = 0.4
         ledPin.write(1)
-        sleep(t)
+        sleep(0.4)
         ledPin.write(0)
-        sleep(t)
+        sleep(0.4)
 
-def setFordBack():
+def setBlinkfs():
     for y in range(0, 10, 1):
         t = 0.2
         ledPin.write(1)
@@ -85,27 +84,27 @@ def servoFordBack():
 
 mylabel1 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial',20,'bold'), text='1', bitmap='info', compound='left')  # bitmap show left
 mylabel1.pack(fill='x')
-startButton = tk.Button(top, bd=5, bg='#89CFF0', text="LED燈亮10秒", command=onStartButtonPress10)
+startButton = tk.Button(top, bd=5, bg='#89CFF0', text="LED燈亮短", command=onStartButtonPress10)
 startButton.pack(fill='x')
 
 mylabel2 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial',20,'bold'), text='2', bitmap='info', compound='left')  # 建立 label 標籤
 mylabel2.pack(fill='x')
-startButton2 = tk.Button(top, bd=5, bg='#89CFF0', text="LED燈亮30秒", command=onStartButtonPress30)
+startButton2 = tk.Button(top, bd=5, bg='#89CFF0', text="LED燈亮長", command=onStartButtonPress20)
 startButton2.pack(fill='x')
 
 mylabel3 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial',20,'bold'), text='3', bitmap='info', compound='left')  # 建立 label 標籤
 mylabel3.pack(fill='x')
-startButton3 = tk.Button(top, bd=5, bg='#89CFF0', text="LED燈慢閃爍10次", command=setFord)
+startButton3 = tk.Button(top, bd=5, bg='#89CFF0', text="LED燈每次2秒閃爍10次", command=setBlinkslow)
 startButton3.pack(fill='x')
 
 mylabel4 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial',20,'bold'), text='4', bitmap='info', compound='left')  # 建立 label 標籤
 mylabel4.pack(fill='x')
-startButton4 = tk.Button(top, bd=5, bg='#89CFF0', text="LED燈快閃爍10次", command=setBack)
+startButton4 = tk.Button(top, bd=5, bg='#89CFF0', text="LED燈每次1秒閃爍10次", command=setBlinkfast)
 startButton4.pack(fill='x')
 
 mylabel5 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial',20,'bold'), text='5', bitmap='info', compound='left')  # 建立 label 標籤
 mylabel5.pack(fill='x')
-startButton5 = tk.Button(top, bd=5, bg='#89CFF0', text="LED燈快慢閃爍10次", command=setFordBack)
+startButton5 = tk.Button(top, bd=5, bg='#89CFF0', text="LED燈快慢閃爍10次", command=setBlinkfs)
 startButton5.pack(fill='x')
 
 mylabel6 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial',20,'bold'), text='6', bitmap='info', compound='left')  # 建立 label 標籤
