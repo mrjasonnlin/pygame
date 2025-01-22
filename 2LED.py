@@ -54,17 +54,23 @@ def setBlinkfast():
         sleep(0.4)
 
 def setBlinkfs():
-    for y in range(0, 10, 1):
+    for y in range(1, 10, 1):
         t = 0.2
         ledPin.write(1)
         sleep(t)
         ledPin.write(0)
         sleep(t)
+
         t = 0.4
         ledPin.write(1)
         sleep(t)
         ledPin.write(0)
         sleep(t)
+
+        beepPin.write(1)
+        sleep(1)
+        beepPin.write(0)
+        sleep(1)
 
 def setServoAngle(servopin, angle):
     board.digital[servopin].write(angle)
