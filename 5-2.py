@@ -18,7 +18,7 @@ import pyfirmata
 from time import sleep
 
 # Associate port and board with pyFirmata
-port = 'com4'
+port = 'com5'
 board = pyfirmata.Arduino(port)
 sleep(5)
 
