@@ -221,12 +221,287 @@ def N3():
     bigPin.write(1)
     sleep(1)
 
-def runno():
-    N1()
-    N2()
-    N3()
+def N4():
+    bigPin.write(0)
 
-mylabel1 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial', 10, 'bold'), text='1', bitmap='info',
+    pushPin.write(0)
+    dataPin.write(0)  # .
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # c2
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # L1
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(1)  # L2
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(1)  # C3
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # R2
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # R1
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(1)  # C1
+    pushPin.write(1)
+
+    bigPin.write(1)
+    sleep(1)
+
+def N5():
+    bigPin.write(0)
+
+    pushPin.write(0)
+    dataPin.write(0)  # .
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # c2
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # L1
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(1)  # L2
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # C3
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # R2
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(1)  # R1
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # C1
+    pushPin.write(1)
+
+    bigPin.write(1)
+    sleep(1)
+
+def N6():
+    bigPin.write(0)
+
+    pushPin.write(0)
+    dataPin.write(0)  # .
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # c2
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # L1
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # L2
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # C3
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # R2
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(1)  # R1
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # C1
+    pushPin.write(1)
+
+    bigPin.write(1)
+    sleep(1)
+
+def N7():
+    bigPin.write(0)
+
+    pushPin.write(0)
+    dataPin.write(0)  # .
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(1)  # c2
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(1)  # L1
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(1)  # L2
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(1)  # C3
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # R2
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # R1
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # C1
+    pushPin.write(1)
+
+    bigPin.write(1)
+    sleep(1)
+
+def N8():
+    bigPin.write(0)
+
+    pushPin.write(0)
+    dataPin.write(0)  # .
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # c2
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # L1
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # L2
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # C3
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # R2
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # R1
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # C1
+    pushPin.write(1)
+
+    bigPin.write(1)
+    sleep(1)
+
+def N9():
+    bigPin.write(0)
+
+    pushPin.write(0)
+    dataPin.write(0)  # .
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # c2
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # L1
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(1)  # L2
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # C3
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # R2
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # R1
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # C1
+    pushPin.write(1)
+
+    bigPin.write(1)
+    sleep(1)
+
+def N0():
+    bigPin.write(0)
+
+    pushPin.write(0)
+    dataPin.write(0)  # .
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(1)  # c2
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # L1
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # L2
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # C3
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # R2
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # R1
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # C1
+    pushPin.write(1)
+
+    bigPin.write(1)
+    sleep(1)
+
+
+def runno():
+    for y in range(0, 3, 1):
+        N1()
+        N2()
+        N3()
+        N4()
+        N5()
+        N6()
+        N7()
+        N8()
+        N9()
+        N0()
+
+mylabel1 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial', 10, 'bold'), text='01', bitmap='info',
                     compound='left')  # bitmap show left
 mylabel1.grid(column=3, row=2)
 # mylabel1.pack(fill='x')
@@ -234,7 +509,7 @@ startButton = tk.Button(top, bd=5, bg='#89CFF0', text="LED燈亮短", command=on
 startButton.grid(column=4, row=2)
 # startButton.pack() #pack(fill='x')
 
-mylabel2 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial', 10, 'bold'), text='2', bitmap='info',
+mylabel2 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial', 10, 'bold'), text='02', bitmap='info',
                     compound='left')  # 建立 label 標籤
 mylabel2.grid(column=3, row=3)
 # mylabel2.pack(fill='x')
@@ -242,7 +517,7 @@ startButton2 = tk.Button(top, bd=5, bg='#89CFF0', text="LED燈亮長", command=o
 startButton2.grid(column=4, row=3)
 # startButton2.pack() #pack(fill='x')
 
-mylabel3 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial', 10, 'bold'), text='3', bitmap='info',
+mylabel3 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial', 10, 'bold'), text='03', bitmap='info',
                     compound='left')  # 建立 label 標籤
 mylabel3.grid(column=3, row=4)
 # mylabel3.pack(fill='x')
@@ -250,7 +525,7 @@ startButton3 = tk.Button(top, bd=5, bg='#89CFF0', text="LED燈每次2秒閃爍10
 startButton3.grid(column=4, row=4)
 # startButton3.pack() #pack(fill='x')
 
-mylabel4 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial', 10, 'bold'), text='4', bitmap='info',
+mylabel4 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial', 10, 'bold'), text='04', bitmap='info',
                     compound='left')  # 建立 label 標籤
 mylabel4.grid(column=3, row=5)
 # mylabel4.pack(fill='x')
@@ -258,7 +533,7 @@ startButton4 = tk.Button(top, bd=5, bg='#89CFF0', text="LED燈每次1秒閃爍10
 startButton4.grid(column=4, row=5)
 # startButton4.pack() #pack(fill='x')
 
-mylabel5 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial', 10, 'bold'), text='5', bitmap='info',
+mylabel5 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial', 10, 'bold'), text='05', bitmap='info',
                     compound='left')  # 建立 label 標籤
 mylabel5.grid(column=3, row=6)
 # mylabel5.pack(fill='x')
@@ -266,7 +541,7 @@ startButton5 = tk.Button(top, bd=5, bg='#89CFF0', text="LED燈快慢閃爍10次"
 startButton5.grid(column=4, row=6)
 # startButton5.pack() #pack(fill='x')
 
-mylabel6 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial', 10, 'bold'), text='6', bitmap='info',
+mylabel6 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial', 10, 'bold'), text='06', bitmap='info',
                     compound='left')  # 建立 label 標籤
 mylabel6.grid(column=3, row=7)
 # mylabel6.pack(fill='x')
@@ -274,7 +549,7 @@ startButton6 = tk.Button(top, bd=5, bg='#FF7F7F', text="伺服馬達180度來回
 startButton6.grid(column=4, row=7)
 # startButton6.pack() #pack(fill='x')
 
-mylabel7 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial', 10, 'bold'), text='7', bitmap='info',
+mylabel7 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial', 10, 'bold'), text='07', bitmap='info',
                     compound='left')  # 建立 label 標籤
 mylabel7.grid(column=3, row=8)
 # mylabel8.pack(fill='x')
@@ -282,7 +557,7 @@ startButton7 = tk.Button(top, bd=5, bg='#FF7F7F', text="伺服馬達90度來回3
 startButton7.grid(column=4, row=8)
 # startButton7.pack() #pack(fill='x')
 
-mylabel8 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial', 10, 'bold'), text='8', bitmap='info',
+mylabel8 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial', 10, 'bold'), text='08', bitmap='info',
                     compound='left')  # 建立 label 標籤
 mylabel8.grid(column=3, row=9)
 # mylabel8.pack(fill='x')
@@ -290,7 +565,7 @@ startButton8 = tk.Button(top, bd=5, bg='#FF7F7F', text="伺服馬達180+90度來
 startButton8.grid(column=4, row=9)
 # startButton8.pack() #pack(fill='x')
 
-mylabel9 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial', 10, 'bold'), text='9', bitmap='info',
+mylabel9 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial', 10, 'bold'), text='09', bitmap='info',
                     compound='left')  # 建立 label 標籤
 mylabel9.grid(column=3, row=10)
 # mylabel9.pack(fill='x')
