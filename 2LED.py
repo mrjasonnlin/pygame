@@ -1,19 +1,27 @@
 import tkinter as tk
+from pyfirmata import Arduino, util
 import pyfirmata
 from pyfirmata import SERVO
 from time import sleep
 
 port = 'com4'
-board = pyfirmata.Arduino(port)
+board = Arduino(port) # pyfirmata.
 sleep(5)
 ledPin = board.get_pin('d:12:o')
 beepPin = board.get_pin('d:3:o')
 bigPin = board.get_pin('d:5:o')
 pushPin = board.get_pin('d:6:o')
 dataPin = board.get_pin('d:7:o')
+ledPin8 = board.get_pin('d:8:o')  # blue ,tie in 5v gnd
+ledPin9 = board.get_pin('d:9:o')  # green
+ledPin10 = board.get_pin('d:10:o')  # white
+ledPin11 = board.get_pin('d:11:o')  # orange
 servopin = 13
 board.digital[servopin].mode = SERVO
 t = 10
+temp = pyfirmata.util.Iterator(board)
+temp.start()
+
 
 top = tk.Tk()
 top.title("blink led using button")
@@ -23,7 +31,7 @@ top.configure(background='#000')
 
 
 def beep():
-    for y in range(1, 4, 1):
+    for y in range(1, 3, 1):
         beepPin.write(1)
         sleep(y)
         beepPin.write(0)
@@ -88,6 +96,7 @@ def servoFord():
             setServoAngle(servopin, i)
         for i in range(180, 1, -1):
             setServoAngle(servopin, i)
+    beep()
 
 
 def servoBack():
@@ -96,6 +105,7 @@ def servoBack():
             setServoAngle(servopin, i)
         for i in range(90, 1, -1):
             setServoAngle(servopin, i)
+    beep()
 
 def servoFordBack():
     servoFord()
@@ -500,6 +510,51 @@ def runno():
         N8()
         N9()
         N0()
+        beep()
+
+def stepFord():
+    t = 0.1
+    for a in range(0, 4, 1):
+        for f in range(0, 200, 20):
+            ledPin8.write(1)
+            sleep(t)
+            ledPin8.write(0)
+
+            ledPin11.write(1)
+            sleep(t)
+            ledPin11.write(0)
+
+            ledPin9.write(1)
+            sleep(t)
+            ledPin9.write(0)
+
+            ledPin10.write(1)
+            sleep(t)
+            ledPin10.write(0)
+    beep()
+
+
+def stepBack():
+    t = 0.1
+    for a in range(0, 4, 1):
+        for b in range(0, 200, 20):
+            ledPin10.write(1)
+            sleep(t)
+            ledPin10.write(0)
+            ledPin9.write(1)
+            sleep(t)
+            ledPin9.write(0)
+            ledPin11.write(1)
+            sleep(t)
+            ledPin11.write(0)
+            ledPin8.write(1)
+            sleep(t)
+            ledPin8.write(0)
+    beep()
+
+def stepRun():
+    stepFord()
+    stepBack()
 
 mylabel1 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial', 10, 'bold'), text='01', bitmap='info',
                     compound='left')  # bitmap show left
@@ -578,5 +633,11 @@ mylabel10 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial', 10, 'bol
 mylabel10.grid(column=3, row=11)
 startButton9 = tk.Button(top, bd=5, bg='#FF7F7F', text="74HC595", command=runno)
 startButton9.grid(column=4, row=11)
+
+mylabel11 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial', 10, 'bold'), text='11', bitmap='info',
+                    compound='left')  # 建立 label 標籤
+mylabel11.grid(column=3, row=12)
+startButton11 = tk.Button(top, bd=5, bg='#FF7F7F', text="步進馬達", command=stepRun)
+startButton11.grid(column=4, row=12)
 
 top.mainloop()
