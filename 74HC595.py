@@ -86,7 +86,7 @@ sleep(1)
 bigPin.write(0)
 
 pushPin.write(0)
-dataPin.write(0) # comma
+dataPin.write(0) # .
 pushPin.write(1)
 
 pushPin.write(0)

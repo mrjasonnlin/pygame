@@ -3,11 +3,14 @@ import pyfirmata
 from pyfirmata import SERVO
 from time import sleep
 
-port = 'com5'
+port = 'com4'
 board = pyfirmata.Arduino(port)
 sleep(5)
 ledPin = board.get_pin('d:12:o')
-beepPin = board.get_pin('d:7:o')
+beepPin = board.get_pin('d:3:o')
+bigPin = board.get_pin('d:5:o')
+pushPin = board.get_pin('d:6:o')
+dataPin = board.get_pin('d:7:o')
 servopin = 13
 board.digital[servopin].mode = SERVO
 t = 10
@@ -26,12 +29,14 @@ def beep():
         beepPin.write(0)
         sleep(1)
 
+
 def onStartButtonPress10():
     startButton.config(state=tk.DISABLED)
     ledPin.write(1)
     sleep(4)
     ledPin.write(0)
     startButton.config(state=tk.ACTIVE)
+
 
 def onStartButtonPress20():
     startButton.config(state=tk.DISABLED)
@@ -95,6 +100,131 @@ def servoBack():
 def servoFordBack():
     servoFord()
     servoBack()
+
+
+def N1():
+    # 1
+    bigPin.write(0)
+
+    pushPin.write(0)
+    dataPin.write(0)  # comma
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(1)  # c2
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(1)  # L1
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(1)  # L2
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(1)  # C3
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # R2
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # R1
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(1)  # C1
+    pushPin.write(1)
+
+    bigPin.write(1)
+    sleep(1)
+
+
+def N2():
+    # 2
+    bigPin.write(0)
+
+    pushPin.write(0)
+    dataPin.write(0)  # comma
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # c2
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(1)  # L1
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # L2
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # C3
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(1)  # R2
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # R1
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # C1
+    pushPin.write(1)
+
+    bigPin.write(1)
+    sleep(1)
+
+
+def N3():
+    # 3
+    bigPin.write(0)
+
+    pushPin.write(0)
+    dataPin.write(0)  # .
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # c2
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(1)  # L1
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(1)  # L2
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # C3
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # R2
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # R1
+    pushPin.write(1)
+
+    pushPin.write(0)
+    dataPin.write(0)  # C1
+    pushPin.write(1)
+
+    bigPin.write(1)
+    sleep(1)
+
+def runno():
+    N1()
+    N2()
+    N3()
 
 mylabel1 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial', 10, 'bold'), text='1', bitmap='info',
                     compound='left')  # bitmap show left
@@ -167,5 +297,11 @@ mylabel9.grid(column=3, row=10)
 startButton9 = tk.Button(top, bd=5, bg='#FF7F7F', text="蜂鳴器", command=beep)
 startButton9.grid(column=4, row=10)
 # startButton9.pack() #pack(fill='x')
+
+mylabel10 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial', 10, 'bold'), text='10', bitmap='info',
+                    compound='left')  # 建立 label 標籤
+mylabel10.grid(column=3, row=11)
+startButton9 = tk.Button(top, bd=5, bg='#FF7F7F', text="74HC595", command=runno)
+startButton9.grid(column=4, row=11)
 
 top.mainloop()
