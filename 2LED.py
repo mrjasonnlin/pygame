@@ -5,7 +5,7 @@ from pyfirmata import SERVO
 from time import sleep
 
 port = 'com4'
-board = Arduino(port) # pyfirmata.
+board = Arduino(port)  # pyfirmata.
 sleep(5)
 ledPin = board.get_pin('d:12:o')
 beepPin = board.get_pin('d:3:o')
@@ -68,17 +68,15 @@ def setBlinkfast():
 
 def setBlinkfs():
     for y in range(1, 10, 1):
-        t = 0.2
         ledPin.write(1)
-        sleep(t)
+        sleep(0.2)
         ledPin.write(0)
-        sleep(t)
+        sleep(0.2)
 
-        t = 0.4
         ledPin.write(1)
-        sleep(t)
+        sleep(0.4)
         ledPin.write(0)
-        sleep(t)
+        sleep(0.4)
 
         beepPin.write(1)
         sleep(1)
@@ -111,7 +109,9 @@ def servoFordBack():
     servoFord()
     servoBack()
 
+
 notime = 0.6
+
 def N1():
     # 1
     bigPin.write(0)
@@ -513,42 +513,42 @@ def runno():
         beep()
 
 def stepFord():
-    t = 0.01
+    sft = 0.01
     for a in range(0, 4, 1):
         for f in range(0, 20, 1):
             ledPin8.write(1)
-            sleep(t)
+            sleep(sft)
             ledPin8.write(0)
 
             ledPin11.write(1)
-            sleep(t)
+            sleep(sft)
             ledPin11.write(0)
 
             ledPin9.write(1)
-            sleep(t)
+            sleep(sft)
             ledPin9.write(0)
 
             ledPin10.write(1)
-            sleep(t)
+            sleep(sft)
             ledPin10.write(0)
     beep()
 
 
 def stepBack():
-    t = 0.01
+    sbt = 0.01
     for a in range(0, 4, 1):
         for b in range(0, 20, 1):
             ledPin10.write(1)
-            sleep(t)
+            sleep(sbt)
             ledPin10.write(0)
             ledPin9.write(1)
-            sleep(t)
+            sleep(sbt)
             ledPin9.write(0)
             ledPin11.write(1)
-            sleep(t)
+            sleep(sbt)
             ledPin11.write(0)
             ledPin8.write(1)
-            sleep(t)
+            sleep(sbt)
             ledPin8.write(0)
     beep()
 
@@ -556,11 +556,13 @@ def stepRun():
     stepFord()
     stepBack()
 
+
 mylabel1 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial', 10, 'bold'), text='01', bitmap='info',
                     compound='left')  # bitmap show left
 mylabel1.grid(column=3, row=2)
 # mylabel1.pack(fill='x')
-startButton = tk.Button(top, bd=5, bg='#89CFF0', font=('Arial', 10, 'bold'), text="LED燈亮短", command=onStartButtonPress10)
+startButton = tk.Button(top, bd=5, bg='#89CFF0', font=('Arial', 10, 'bold'), text="LED燈亮短",
+                        command=onStartButtonPress10)
 startButton.grid(column=4, row=2)
 # startButton.pack() #pack(fill='x')
 
@@ -568,7 +570,8 @@ mylabel2 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial', 10, 'bold
                     compound='left')  # 建立 label 標籤
 mylabel2.grid(column=3, row=3)
 # mylabel2.pack(fill='x')
-startButton2 = tk.Button(top, bd=5, bg='#89CFF0', font=('Arial', 10, 'bold'), text="LED燈亮長", command=onStartButtonPress20)
+startButton2 = tk.Button(top, bd=5, bg='#89CFF0', font=('Arial', 10, 'bold'), text="LED燈亮長",
+                         command=onStartButtonPress20)
 startButton2.grid(column=4, row=3)
 # startButton2.pack() #pack(fill='x')
 
@@ -576,7 +579,8 @@ mylabel3 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial', 10, 'bold
                     compound='left')  # 建立 label 標籤
 mylabel3.grid(column=3, row=4)
 # mylabel3.pack(fill='x')
-startButton3 = tk.Button(top, bd=5, bg='#89CFF0', font=('Arial', 10, 'bold'), text="LED燈每次2秒閃爍10次", command=setBlinkslow)
+startButton3 = tk.Button(top, bd=5, bg='#89CFF0', font=('Arial', 10, 'bold'), text="LED燈每次2秒閃爍10次",
+                         command=setBlinkslow)
 startButton3.grid(column=4, row=4)
 # startButton3.pack() #pack(fill='x')
 
@@ -584,7 +588,8 @@ mylabel4 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial', 10, 'bold
                     compound='left')  # 建立 label 標籤
 mylabel4.grid(column=3, row=5)
 # mylabel4.pack(fill='x')
-startButton4 = tk.Button(top, bd=5, bg='#89CFF0', font=('Arial', 10, 'bold'), text="LED燈每次1秒閃爍10次", command=setBlinkfast)
+startButton4 = tk.Button(top, bd=5, bg='#89CFF0', font=('Arial', 10, 'bold'), text="LED燈每次1秒閃爍10次",
+                         command=setBlinkfast)
 startButton4.grid(column=4, row=5)
 # startButton4.pack() #pack(fill='x')
 
@@ -616,7 +621,8 @@ mylabel8 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial', 10, 'bold
                     compound='left')  # 建立 label 標籤
 mylabel8.grid(column=3, row=9)
 # mylabel8.pack(fill='x')
-startButton8 = tk.Button(top, bd=5, bg='#FF7F7F', font=('Arial', 10, 'bold'), text="伺服馬達180+90度來回3次", command=servoFordBack)
+startButton8 = tk.Button(top, bd=5, bg='#FF7F7F', font=('Arial', 10, 'bold'), text="伺服馬達180+90度來回3次",
+                         command=servoFordBack)
 startButton8.grid(column=4, row=9)
 # startButton8.pack() #pack(fill='x')
 
