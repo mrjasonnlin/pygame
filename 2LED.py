@@ -513,9 +513,9 @@ def runno():
         beep()
 
 def stepFord():
-    t = 0.1
+    t = 0.01
     for a in range(0, 4, 1):
-        for f in range(0, 200, 20):
+        for f in range(0, 20, 1):
             ledPin8.write(1)
             sleep(t)
             ledPin8.write(0)
@@ -535,9 +535,9 @@ def stepFord():
 
 
 def stepBack():
-    t = 0.1
+    t = 0.01
     for a in range(0, 4, 1):
-        for b in range(0, 200, 20):
+        for b in range(0, 20, 1):
             ledPin10.write(1)
             sleep(t)
             ledPin10.write(0)
