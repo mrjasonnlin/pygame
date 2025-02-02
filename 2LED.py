@@ -24,10 +24,10 @@ temp.start()
 
 
 top = tk.Tk()
-top.title("blink led using button")
+top.title("Jason的ARDUINO實驗板")
 top.minsize(200, 300)
 top.resizable(True, True)
-top.configure(background='#000')
+top.configure(background='#89CFF0')
 
 
 def beep():
