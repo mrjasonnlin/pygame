@@ -646,4 +646,10 @@ mylabel11.grid(column=3, row=12)
 startButton11 = tk.Button(top, bd=5, bg='#FF7F7F', font=('Arial', 10, 'bold'), text="步進馬達", command=stepRun)
 startButton11.grid(column=4, row=12)
 
+mylabel12 = tk.Label(top, bd=5, fg='#000', bg='#fbfafe', font=('Arial', 10, 'bold'), text='12', bitmap='info',
+                    compound='left')  # 建立 label 標籤
+mylabel12.grid(column=3, row=13)
+startButton12 = tk.Button(top, bd=5, bg='#FF7F7F', font=('Arial', 10, 'bold'), text="步進馬達back", command=stepFord)
+startButton12.grid(column=4, row=13)
+
 top.mainloop()
